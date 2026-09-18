@@ -7,7 +7,25 @@
 </head>
 <body>
     <script>
-        
+let score = 10;              // 1
+score += 5;                  // 2
+score *= 2;                  // 3
+let bonus = score % 7;       // 4
+score -= bonus;              // 5
+let old = ++score;           // 6
+let next = ++score;          // 7
+score /= 3;                  // 8
+bonus--;                     // 9
+score = score + bonus * 4;   // 10
+
+console.log(score, bonus, old, next); 
+
+// 1. Why is old 28 but score 29 after line 6?
+// A: ++ means to increment, which adds up by one.
+// 2. Why doesn’t line 10 give 44?
+// A:Line 10 doesnt give 44 because you have to follow the order of PEMDAS.
+// 3. What would score be if line 3 came before line 2?
+// A: 25
     </script>
 </body>
 </html>
