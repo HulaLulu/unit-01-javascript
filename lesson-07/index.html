@@ -2,12 +2,35 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
     <script>
-        
+        let grade = Number(prompt("What Grade Did You Recieve?"));
+        if (grade >= 90) {
+            alert("A");
+        }
+        else if (grade >= 80) {
+            alert("B")
+        }
+         else if (grade >= 70) {
+            alert("C")
+        }else if (grade >= 60) {
+            alert("D")
+        }else if (grade >= 50) {
+            alert("F")
+        }
+        /*
+  TEST RESULTS - Letter Grade Converter
+  Test score | Expected | Your output
+  -----------|----------|------------
+  90         | A        | __A_
+  89         | B        | _B__
+  60         | D        | _D__
+  59         | F        | _F__
+  100        | A        | _A__
+*/
     </script>
 </body>
 </html>
