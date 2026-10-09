@@ -1,0 +1,65 @@
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+
+// -------------------------------------------
+// SCENARIO 1: Game banner
+// A plain function: no parameters and no return value.
+// Write showBanner(). It logs these three lines:
+//   ====================
+//     GUESS THE NUMBER
+//   ====================
+// Test:  call showBanner() twice.
+// Check: the banner appears twice, six lines in total.
+// ---------------------------------------------------------
+
+function showBanner() {
+    console.log("==================== ")
+    console.log("GUESS THE NUMBER")
+    console.log("====================")
+}
+
+showBanner()
+
+
+
+/// ---------------------------------------------------------
+// SCENARIO 2: Name tags
+// A function with one parameter.
+// Write printNameTag(name). It logs "Hello, my name is "
+// followed by the name.
+// Test:  call it three times with three different names.
+// Check: three different name tags come from one function.
+// ---------------------------------------------------------
+
+function printNameTag(name) {
+    console.log("Hello, my name is " + name);
+}
+printNameTag("Alena")
+printNameTag("Tyler")
+printNameTag("Nathaniel")
+
+
+// ---------------------------------------------------------
+// SCENARIO 3: Tip jar
+// Two parameters and a return value.
+// Write calculateTip(bill, pct). It returns the tip amount.
+// Do not put console.log inside this function.
+// Test:  store calculateTip(80, 15) in a variable named tip
+//        and log tip.toFixed(2). Then log calculateTip(50, 20).
+// Check: 12.00, then 10
+// ---------------------------------------------------------
+
+function calculateTip(bill, percent) {
+    let tip = bill * (percent / 100);
+    return tip;
+}
+let aTip = calculateTip(80, 15);
+    aTip.toFixed(2)
+
+    </script>
+</body>
