@@ -1,0 +1,80 @@
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// PREDICTION: 3 , 2
+// ACTUAL: 3 , 2
+// WHY: 
+console.log("--- Puzzle 1 ---");
+let lives = 3;
+function loseLife(lives) {
+    lives = lives - 1;
+    return lives;
+}
+let left = loseLife(lives);
+console.log(lives, left);
+
+// PREDICTION: The score stays as 50.
+// ACTUAL: 100, 50
+// WHY: score, which is 50 is multiplied by 2, giving us 100.
+console.log("--- Puzzle 2 ---");
+let score = 50;
+function doubleIt(num) {
+    num = num * 2;
+    console.log(num);
+}
+doubleIt(score);
+console.log(score);
+
+// PREDICTION: dog
+// ACTUAL: "dog"
+// WHY: shout(word) has no argument
+console.log("--- Puzzle 3 ---");
+function shout(word) {
+    word = word.toUpperCase();
+}
+let pet = "dog";
+shout(pet);
+console.log(pet);
+
+// MY FIX: Complete shoutFixed so pet ends up as "DOG"
+// without making pet global inside the function. (Hint: return)
+function shoutFixed(word) {
+    // write your code here
+}
+pet = shoutFixed(pet);
+console.log("Puzzle 3 fix:", pet);
+
+// PREDICTION: Jordan , Nothing
+// ACTUAL: "Jordan" "undefined"
+// WHY: while player name is declared, round is not.
+console.log("--- Puzzle 4 ---");
+function startGame() {
+    playerName = "Jordan";
+    let round = 1;
+}
+startGame();
+console.log(playerName);
+console.log(typeof round);
+
+// PREDICTION: 110
+// ACTUAL: 7
+// WHY: 
+console.log("--- Puzzle 5 ---");
+let coins = 10;
+function spend(amount) {
+    coins = coins - amount;
+}
+function earn(amount) {
+    let coins = 100;
+    coins = coins + amount;
+}
+spend(3);
+earn(5);
+console.log(coins);
+
+    </script>
+</body>
