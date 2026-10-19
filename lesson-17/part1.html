@@ -1,0 +1,64 @@
+<script>
+// ===== My Student Profile =====
+
+// ----- CORE -----
+
+// Core 1: Create an object named student with three properties:
+//   name (a string), grade (a number), and scores (an array of three test scores).
+
+let student = {
+    name: "Bartholomew The XVIII",
+    grade: "10",
+    scores:["88", "92", "99"]
+}
+
+// Core 2: Log the name using DOT notation.
+//   Log the grade using BRACKET notation.
+//   Log the second score using student.scores[1].
+
+console.log(student.name);
+console.log(student["grade"]);
+console.log(student.scores[1]);
+
+
+
+// Core 3: Change grade to a new value. Add a new homeroom property.
+//   Log both. Then log a property that does NOT exist.
+//   Write a comment explaining what printed.
+
+    student.grade = "12"
+    student.homeroom = "B012"
+    console.log(student.grade)
+    console.log(student.homeroom)
+    console.log(student.waffle)
+
+// Core 4: Inside your object, add a method named describe that RETURNS
+//   a sentence like "Maya is in grade 12". Use this.
+//   Then log student.describe() here.
+
+   describe: function(student) {
+    return this.name + " " + this.grade
+   }
+
+
+// ----- STRETCH -----
+
+// Stretch 5: Inside your object, add a method named getHighest that RETURNS
+//   the highest of this.scores[0], this.scores[1], and this.scores[2].
+//   Hint: which Math method from Day 10 finds the largest number?
+//   Log the result here.
+
+
+// Stretch 6: Inside your object, add a method named addBonus(points)
+//   that adds points to the FIRST score.
+//   Here: print the highest score, call student.addBonus(10),
+//   then print the highest score again.
+
+
+// ----- CHALLENGE -----
+
+// Challenge 7: Inside your object, add a method named getLetter that uses
+//   this.getHighest() and an if...else if chain (or switch)
+//   to return "A", "B", "C", "D", or "F".
+//   Print a report line like: Maya (Grade 12): 90 - A
+</script>
