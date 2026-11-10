@@ -27,8 +27,41 @@
    }
 
    function checkName() {
-    
+    if (custName.value.trim()=== "") {
+      showError("nameError", "Enter your name")
+      return false;
+    }
+    else {
+        showError("nameError", ""
+            return true;
+        )
+    }
    }
+
+   function checkQty() {
+    if (qty.value.trim()=== "") {
+       showError("qtyError", "Enter a Quantity.")
+       return false;
+    }
+    if (isNaN(qty.value)) {
+        showError("qtyError", "Quantity must be a number.");
+        return false;
+    }
+    if (qty.value < 1 || qty.value > 10) {
+        showError("qtyError", "Order 1 to 10 pizzas only.");
+            return false;
+
+    }
+}
+
+
+
+
+
+custName.addEventListener("blur", checkName);
+qty.addEventListener("blur", checkQty);
+promo.addEventlistener("blur", checkPromo)
+
   </script>
 </body>
 </html>
